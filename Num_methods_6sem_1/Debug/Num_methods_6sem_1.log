@@ -1,0 +1,8 @@
+﻿  MyForm.cpp
+e:\pasha\vs_projects\num_methods_6sem_1_00\num_methods_6sem_1\myform.h(947): warning C4018: <: несоответствие типов со знаком и без знака
+e:\pasha\vs_projects\num_methods_6sem_1_00\num_methods_6sem_1\myform.h(1104): warning C4018: <: несоответствие типов со знаком и без знака
+e:\pasha\vs_projects\num_methods_6sem_1_00\num_methods_6sem_1\myform.cpp(7): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
+  tasks.cpp
+  Создание кода...
+  MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  Num_methods_6sem_1.vcxproj -> E:\PASHA\VS_Projects\Num_methods_6sem_1_00\Debug\Num_methods_6sem_1.exe
