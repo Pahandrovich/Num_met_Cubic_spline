@@ -23,11 +23,11 @@ Task_test::Task_test(int _N)
 	c_coef.resize(N + 1);
 	d_coef.resize(N + 1);
 
-	Init_coef_a();
+	/*Init_coef_a();
 	Init_coef_c();
 
 	Init_coef_b();
-	Init_coef_d();
+	Init_coef_d();*/
 
 }
 
@@ -125,7 +125,7 @@ void Task_base::Init_coef_d()
 	}
 }
 
-Task_main_1::Task_main_1(int _N, int choise)
+Task_main_1::Task_main_1(int _N)
 {
 	N = _N;
 	Xgrid.resize(N + 1);
@@ -133,11 +133,11 @@ Task_main_1::Task_main_1(int _N, int choise)
 	a = 1;
 	b = PI;
 	Mu1 = Mu2 = 0;
-	if (choise)
+	/*if (choise)
 	{
 		Mu1 = -(5.0 / 4.0)*sin(1) + cos(1);
 		Mu2 = 1.0 / sqrt(PI);
-	}
+	}*/
 	h = (double)(b - a) / N;
 	for (int i = 0; i < N; i++)
 	{
@@ -152,10 +152,10 @@ Task_main_1::Task_main_1(int _N, int choise)
 	c_coef.resize(N + 1);
 	d_coef.resize(N + 1);
 
-	Init_coef_a();
+	/*Init_coef_a();
 	Init_coef_c();
 	Init_coef_b();
-	Init_coef_d();
+	Init_coef_d();*/
 }
 
 double Task_main_1::Function(double x) const
@@ -197,4 +197,27 @@ double Task_base::S_xi_derivative_1(int i, double x)
 double Task_base::S_xi_derivative_2(int i, double x)
 {
 	return (c_coef[i] + d_coef[i] * (x-Xgrid[i]));
+}
+
+void Task_test::Init_coefs(int choise)
+{
+
+	Init_coef_a();
+	Init_coef_c();
+	Init_coef_b();
+	Init_coef_d();
+}
+
+void Task_main_1::Init_coefs(int choise)
+{
+	if (choise)
+	{
+		Mu1 = -(5.0 / 4.0)*sin(1) + cos(1);
+		Mu2 = -1.0 / sqrt(PI);
+	}
+
+	Init_coef_a();
+	Init_coef_c();
+	Init_coef_b();
+	Init_coef_d();
 }

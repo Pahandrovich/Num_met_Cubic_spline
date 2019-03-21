@@ -135,6 +135,9 @@ namespace Nummethods6sem1 {
 	private: System::Windows::Forms::TextBox^  textBox2_der1;
 
 	private: System::Windows::Forms::Label^  label12;
+private: System::Windows::Forms::GroupBox^  groupBox1;
+private: System::Windows::Forms::RadioButton^  radioButton2_2;
+private: System::Windows::Forms::RadioButton^  radioButton2_1;
 
 
 
@@ -211,6 +214,13 @@ namespace Nummethods6sem1 {
 			this->textBox1_n = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->radioButton2_2 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton2_1 = (gcnew System::Windows::Forms::RadioButton());
+			this->textBox2_der2 = (gcnew System::Windows::Forms::TextBox());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->textBox2_der1 = (gcnew System::Windows::Forms::TextBox());
+			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->zedGraphControl2_2 = (gcnew ZedGraph::ZedGraphControl());
 			this->zedGraphControl2_3 = (gcnew ZedGraph::ZedGraphControl());
 			this->label5 = (gcnew System::Windows::Forms::Label());
@@ -236,15 +246,12 @@ namespace Nummethods6sem1 {
 			this->textBox2_n = (gcnew System::Windows::Forms::TextBox());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->zedGraphControl2_1 = (gcnew ZedGraph::ZedGraphControl());
-			this->textBox2_der2 = (gcnew System::Windows::Forms::TextBox());
-			this->label11 = (gcnew System::Windows::Forms::Label());
-			this->textBox2_der1 = (gcnew System::Windows::Forms::TextBox());
-			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1_2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1_1))->BeginInit();
 			this->tabPage2->SuspendLayout();
+			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2_2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2_1))->BeginInit();
 			this->SuspendLayout();
@@ -299,7 +306,7 @@ namespace Nummethods6sem1 {
 			this->tabPage1->Padding = System::Windows::Forms::Padding(2);
 			this->tabPage1->Size = System::Drawing::Size(1275, 708);
 			this->tabPage1->TabIndex = 0;
-			this->tabPage1->Text = L"tabPage1";
+			this->tabPage1->Text = L"Test task";
 			this->tabPage1->UseVisualStyleBackColor = true;
 			// 
 			// textBox1_der2
@@ -449,7 +456,7 @@ namespace Nummethods6sem1 {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(1012, 76);
+			this->label2->Location = System::Drawing::Point(1116, 186);
 			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(23, 13);
@@ -458,7 +465,7 @@ namespace Nummethods6sem1 {
 			// 
 			// textBox1_factor
 			// 
-			this->textBox1_factor->Location = System::Drawing::Point(1038, 74);
+			this->textBox1_factor->Location = System::Drawing::Point(1142, 184);
 			this->textBox1_factor->Margin = System::Windows::Forms::Padding(2);
 			this->textBox1_factor->Name = L"textBox1_factor";
 			this->textBox1_factor->Size = System::Drawing::Size(76, 20);
@@ -508,7 +515,7 @@ namespace Nummethods6sem1 {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(1023, 265);
+			this->button1->Location = System::Drawing::Point(1119, 261);
 			this->button1->Margin = System::Windows::Forms::Padding(2);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(123, 73);
@@ -519,7 +526,7 @@ namespace Nummethods6sem1 {
 			// 
 			// textBox1_n
 			// 
-			this->textBox1_n->Location = System::Drawing::Point(1038, 42);
+			this->textBox1_n->Location = System::Drawing::Point(1142, 152);
 			this->textBox1_n->Margin = System::Windows::Forms::Padding(2);
 			this->textBox1_n->Name = L"textBox1_n";
 			this->textBox1_n->Size = System::Drawing::Size(76, 20);
@@ -529,7 +536,7 @@ namespace Nummethods6sem1 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(1020, 42);
+			this->label1->Location = System::Drawing::Point(1124, 152);
 			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(13, 13);
@@ -538,6 +545,7 @@ namespace Nummethods6sem1 {
 			// 
 			// tabPage2
 			// 
+			this->tabPage2->Controls->Add(this->groupBox1);
 			this->tabPage2->Controls->Add(this->textBox2_der2);
 			this->tabPage2->Controls->Add(this->label11);
 			this->tabPage2->Controls->Add(this->textBox2_der1);
@@ -561,8 +569,79 @@ namespace Nummethods6sem1 {
 			this->tabPage2->Padding = System::Windows::Forms::Padding(2);
 			this->tabPage2->Size = System::Drawing::Size(1275, 708);
 			this->tabPage2->TabIndex = 1;
-			this->tabPage2->Text = L"tabPage2";
+			this->tabPage2->Text = L"Main task 1";
 			this->tabPage2->UseVisualStyleBackColor = true;
+			// 
+			// groupBox1
+			// 
+			this->groupBox1->Controls->Add(this->radioButton2_2);
+			this->groupBox1->Controls->Add(this->radioButton2_1);
+			this->groupBox1->Location = System::Drawing::Point(928, 263);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->Size = System::Drawing::Size(144, 85);
+			this->groupBox1->TabIndex = 30;
+			this->groupBox1->TabStop = false;
+			this->groupBox1->Text = L"Выбор ГУ";
+			// 
+			// radioButton2_2
+			// 
+			this->radioButton2_2->AutoSize = true;
+			this->radioButton2_2->Location = System::Drawing::Point(16, 57);
+			this->radioButton2_2->Name = L"radioButton2_2";
+			this->radioButton2_2->Size = System::Drawing::Size(121, 17);
+			this->radioButton2_2->TabIndex = 1;
+			this->radioButton2_2->Text = L"Совпадение 2-х пр.";
+			this->radioButton2_2->UseVisualStyleBackColor = true;
+			// 
+			// radioButton2_1
+			// 
+			this->radioButton2_1->AutoSize = true;
+			this->radioButton2_1->Checked = true;
+			this->radioButton2_1->Location = System::Drawing::Point(16, 29);
+			this->radioButton2_1->Name = L"radioButton2_1";
+			this->radioButton2_1->Size = System::Drawing::Size(46, 17);
+			this->radioButton2_1->TabIndex = 0;
+			this->radioButton2_1->TabStop = true;
+			this->radioButton2_1->Text = L"ЕГУ";
+			this->radioButton2_1->UseVisualStyleBackColor = true;
+			// 
+			// textBox2_der2
+			// 
+			this->textBox2_der2->Location = System::Drawing::Point(928, 223);
+			this->textBox2_der2->Margin = System::Windows::Forms::Padding(2);
+			this->textBox2_der2->Name = L"textBox2_der2";
+			this->textBox2_der2->ReadOnly = true;
+			this->textBox2_der2->Size = System::Drawing::Size(134, 20);
+			this->textBox2_der2->TabIndex = 29;
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(925, 208);
+			this->label11->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(132, 13);
+			this->label11->TabIndex = 28;
+			this->label11->Text = L"Max GP second derivative";
+			// 
+			// textBox2_der1
+			// 
+			this->textBox2_der1->Location = System::Drawing::Point(928, 181);
+			this->textBox2_der1->Margin = System::Windows::Forms::Padding(2);
+			this->textBox2_der1->Name = L"textBox2_der1";
+			this->textBox2_der1->ReadOnly = true;
+			this->textBox2_der1->Size = System::Drawing::Size(134, 20);
+			this->textBox2_der1->TabIndex = 27;
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(925, 166);
+			this->label12->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(113, 13);
+			this->label12->TabIndex = 26;
+			this->label12->Text = L"Max GP first derivative";
 			// 
 			// zedGraphControl2_2
 			// 
@@ -674,7 +753,7 @@ namespace Nummethods6sem1 {
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(1039, 77);
+			this->label7->Location = System::Drawing::Point(1114, 195);
 			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(23, 13);
@@ -683,7 +762,7 @@ namespace Nummethods6sem1 {
 			// 
 			// textBox2_factor
 			// 
-			this->textBox2_factor->Location = System::Drawing::Point(1065, 74);
+			this->textBox2_factor->Location = System::Drawing::Point(1140, 192);
 			this->textBox2_factor->Margin = System::Windows::Forms::Padding(2);
 			this->textBox2_factor->Name = L"textBox2_factor";
 			this->textBox2_factor->Size = System::Drawing::Size(76, 20);
@@ -733,7 +812,7 @@ namespace Nummethods6sem1 {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(1050, 265);
+			this->button2->Location = System::Drawing::Point(1108, 264);
 			this->button2->Margin = System::Windows::Forms::Padding(2);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(123, 73);
@@ -744,7 +823,7 @@ namespace Nummethods6sem1 {
 			// 
 			// textBox2_n
 			// 
-			this->textBox2_n->Location = System::Drawing::Point(1065, 42);
+			this->textBox2_n->Location = System::Drawing::Point(1140, 160);
 			this->textBox2_n->Margin = System::Windows::Forms::Padding(2);
 			this->textBox2_n->Name = L"textBox2_n";
 			this->textBox2_n->Size = System::Drawing::Size(76, 20);
@@ -754,7 +833,7 @@ namespace Nummethods6sem1 {
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(1047, 42);
+			this->label8->Location = System::Drawing::Point(1122, 160);
 			this->label8->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(13, 13);
@@ -775,44 +854,6 @@ namespace Nummethods6sem1 {
 			this->zedGraphControl2_1->Size = System::Drawing::Size(436, 352);
 			this->zedGraphControl2_1->TabIndex = 13;
 			// 
-			// textBox2_der2
-			// 
-			this->textBox2_der2->Location = System::Drawing::Point(928, 223);
-			this->textBox2_der2->Margin = System::Windows::Forms::Padding(2);
-			this->textBox2_der2->Name = L"textBox2_der2";
-			this->textBox2_der2->ReadOnly = true;
-			this->textBox2_der2->Size = System::Drawing::Size(134, 20);
-			this->textBox2_der2->TabIndex = 29;
-			// 
-			// label11
-			// 
-			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(925, 208);
-			this->label11->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(132, 13);
-			this->label11->TabIndex = 28;
-			this->label11->Text = L"Max GP second derivative";
-			// 
-			// textBox2_der1
-			// 
-			this->textBox2_der1->Location = System::Drawing::Point(928, 181);
-			this->textBox2_der1->Margin = System::Windows::Forms::Padding(2);
-			this->textBox2_der1->Name = L"textBox2_der1";
-			this->textBox2_der1->ReadOnly = true;
-			this->textBox2_der1->Size = System::Drawing::Size(134, 20);
-			this->textBox2_der1->TabIndex = 27;
-			// 
-			// label12
-			// 
-			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(925, 166);
-			this->label12->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(113, 13);
-			this->label12->TabIndex = 26;
-			this->label12->Text = L"Max GP first derivative";
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -829,6 +870,8 @@ namespace Nummethods6sem1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1_1))->EndInit();
 			this->tabPage2->ResumeLayout(false);
 			this->tabPage2->PerformLayout();
+			this->groupBox1->ResumeLayout(false);
+			this->groupBox1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2_2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2_1))->EndInit();
 			this->ResumeLayout(false);
@@ -876,6 +919,7 @@ namespace Nummethods6sem1 {
 		//label11->Text = "new_n = " + Convert::ToString(new_n);
 
 		Task_test task(n);
+		task.Init_coefs();
 		//Task_test task2(new_n);
 
 		double h = 2.0 / NN;
@@ -1039,6 +1083,10 @@ namespace Nummethods6sem1 {
 		double b = PI;
 
 		Task_main_1 task(n);
+		if (radioButton2_1->Checked)	
+			task.Init_coefs();
+		else
+			task.Init_coefs(1);
 
 		double h = ((double)(b - a)) / NN;
 

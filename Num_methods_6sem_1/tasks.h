@@ -18,6 +18,7 @@ class Task_base
 	virtual double Function(double x) const = 0 ;
 	virtual double FunctionDerivative_1(double x) const = 0;
 	virtual double FunctionDerivative_2(double x) const = 0;
+	virtual void Init_coefs(int choise = 0) = 0;
 	void Init_coef_a();
 	void Init_coef_b();
 	void Init_coef_c();
@@ -49,13 +50,15 @@ public:
 	double Function(double x) const;
 	double FunctionDerivative_1(double x) const;
 	double FunctionDerivative_2(double x) const;
+	void Init_coefs(int choise = 0);
 };
 
 class Task_main_1 : public Task_base
 {
 public:
-	Task_main_1(int _N, int choise = 0);
+	Task_main_1(int _N);
 	double Function(double x) const;
 	double FunctionDerivative_1(double x) const;
 	double FunctionDerivative_2(double x) const;
+	void Init_coefs(int choise = 0);
 };
