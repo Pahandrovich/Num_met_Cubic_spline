@@ -880,19 +880,6 @@ private: System::Windows::Forms::RadioButton^  radioButton2_1;
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {  //   TEST   TASK
 
-		/*label4->Text = "C";
-		label6->Text = "D1";
-		label7->Text = "D2";
-		label8->Text = "D3";
-		label9->Text = "B";
-		label10->Text = "F(xi)";
-		label12->Text = "a";
-		label13->Text = "b";
-		label14->Text = "d";*/
-		/*label9->Text = "ñ";
-		label10->Text = "d";*/
-
-
 		dataGridView1_1->Rows->Clear();
 		dataGridView1_2->Rows->Clear();
 		GraphPane^ panel1 = zedGraphControl1_1->GraphPane;
@@ -902,7 +889,6 @@ private: System::Windows::Forms::RadioButton^  radioButton2_1;
 		panel2->CurveList->Clear();
 		panel3->CurveList->Clear();
 		PointPairList^ point_list_numeric1 = gcnew ZedGraph::PointPairList();
-		//PointPairList^ point_list_numeric2 = gcnew ZedGraph::PointPairList();
 		PointPairList^ point_list_accurate = gcnew ZedGraph::PointPairList();
 		PointPairList^ p_list_deriv_num_1 = gcnew ZedGraph::PointPairList();
 		PointPairList^ p_list_deriv_num_2 = gcnew ZedGraph::PointPairList();
@@ -915,19 +901,14 @@ private: System::Windows::Forms::RadioButton^  radioButton2_1;
 		double a = -1;
 		double b = 1;
 
-		//int new_n = n*2;
-		//label11->Text = "new_n = " + Convert::ToString(new_n);
-
 		Task_test task(n);
 		task.Init_coefs();
-		//Task_test task2(new_n);
 
 		double h = 2.0 / NN;
 
 		double x_curr = 0;
 		double temp;
 		int curr_S_xi = 0;
-		//	curr_S_xi2 = 0;
 		double accurate = 0;
 		double numeric1 = 0;
 		double der_num_1 = 0;
@@ -935,7 +916,6 @@ private: System::Windows::Forms::RadioButton^  radioButton2_1;
 		double der_acc_1 = 0;
 		double der_acc_2 = 0;
 
-		//double numeric2 = 0;
 		double GP = 0,
 			maxGP = 0,
 			GP_der_1 = 0,
@@ -953,25 +933,21 @@ private: System::Windows::Forms::RadioButton^  radioButton2_1;
 			p_list_deriv_acc_1->Add(x_curr, der_acc_1);
 			p_list_deriv_acc_2->Add(x_curr, der_acc_2);
 			if (i % (NN / n) == 0 && curr_S_xi < n) curr_S_xi++;
-			//if (i % (NN / new_n) == 0 && curr_S_xi2 < new_n) curr_S_xi2++;
 
 			numeric1 = task.S_xi(curr_S_xi, x_curr);
 			der_num_1 = task.S_xi_derivative_1(curr_S_xi,x_curr);
 			der_num_2 = task.S_xi_derivative_2(curr_S_xi,x_curr);
-			//numeric2 = task2.S_xi(curr_S_xi2, x_curr);
 			point_list_numeric1->Add(x_curr, numeric1);
 			p_list_deriv_num_1->Add(x_curr, der_num_1);
 			p_list_deriv_num_2->Add(x_curr, der_num_2);
-			//point_list_numeric2->Add(x_curr, numeric2);
 
 			GP = abs(accurate - numeric1);
 			GP_der_1 = abs(der_acc_1 - der_num_1);
 			GP_der_2 = abs(der_acc_2 - der_num_2);
-			//LP = abs(numeric2 - numeric1);
 			if (GP > maxGP) { maxGP = GP; temp = x_curr; }
 			if (GP_der_1 > maxGP_der_1) { maxGP_der_1 = GP_der_1; }
 			if (GP_der_2 > maxGP_der_2) { maxGP_der_2 = GP_der_2; }
-			//if (LP > maxLP) maxLP = LP;
+
 			dataGridView1_1->Rows->Add();
 			dataGridView1_1->Rows[i]->Cells[0]->Value = i;
 			dataGridView1_1->Rows[i]->Cells[1]->Value = x_curr;
@@ -986,7 +962,6 @@ private: System::Windows::Forms::RadioButton^  radioButton2_1;
 		textBox1_GP->Text = Convert::ToString(maxGP);
 		textBox1_der1->Text = Convert::ToString(maxGP_der_1);
 		textBox1_der2->Text = Convert::ToString(maxGP_der_2);
-		//textBoxLP->Text = Convert::ToString(maxLP);
 
 		for (int i = 1; i < task.a_coef.size(); i++)
 		{
@@ -1000,51 +975,12 @@ private: System::Windows::Forms::RadioButton^  radioButton2_1;
 			dataGridView1_2->Rows[i - 1]->Cells[6]->Value = task.d_coef[i];
 		}
 
-		/*for (int i = 0; i < task.c_coef.size(); i++)
-		{
-			label9->Text += " " + task.c_coef[i];
-		}*/
-		/*for (int i = 0; i < task.a_coef.size(); i++)
-		{
-			label12->Text += " " + task.a_coef[i];
-		}
-		for (int i = 0; i < task.b_coef.size(); i++)
-		{
-			label13->Text += " " + task.b_coef[i];
-		}*/
-		/*for (int i = 0; i < task.d_coef.size(); i++)
-		{
-			label10->Text += " " + task.d_coef[i];
-		}*/
-
-		/*for (int i = 0; i < task.D1.size(); i++)
-		{
-			label6->Text += " " + task.D1[i];
-		}
-		for (int i = 0; i < task.D2.size(); i++)
-		{
-			label7->Text += " " + task.D2[i];
-		}
-		for (int i = 0; i < task.D3.size(); i++)
-		{
-			label8->Text += " " + task.D3[i];
-		}
-		for (int i = 0; i < task.F.size(); i++)
-		{
-			label9->Text += " " + task.F[i];
-		}
-		for (int i = 0; i < task.Ygrid.size(); i++)
-		{
-			label10->Text += " " + task.Ygrid[i];
-		}*/
-
 		LineItem^ Curve1 = panel1->AddCurve("accurate trajectory", point_list_accurate, Color::Blue, SymbolType::None);
 		LineItem^ Curve2 = panel1->AddCurve("numeric trajectory", point_list_numeric1, Color::Red, SymbolType::None);
 		LineItem^ Curve3 = panel2->AddCurve("accurate trajectory", p_list_deriv_acc_1, Color::Blue, SymbolType::None);
 		LineItem^ Curve4 = panel2->AddCurve("numeric trajectory", p_list_deriv_num_1, Color::Red, SymbolType::None);
 		LineItem^ Curve5 = panel3->AddCurve("accurate trajectory", p_list_deriv_acc_2, Color::Blue, SymbolType::None);
 		LineItem^ Curve6 = panel3->AddCurve("numeric trajectory", p_list_deriv_num_2, Color::Red, SymbolType::None);
-		//LineItem^ Curve3 = panel1->AddCurve("numeric2 trajectory", point_list_numeric2, Color::Blue, SymbolType::None);
 
 		zedGraphControl1_1->AxisChange();
 		zedGraphControl1_1->Invalidate();
@@ -1069,7 +1005,6 @@ private: System::Windows::Forms::RadioButton^  radioButton2_1;
 		panel2->CurveList->Clear();
 		panel3->CurveList->Clear();
 		PointPairList^ point_list_numeric1 = gcnew ZedGraph::PointPairList();
-		//PointPairList^ point_list_numeric2 = gcnew ZedGraph::PointPairList();
 		PointPairList^ point_list_accurate = gcnew ZedGraph::PointPairList();
 		PointPairList^ p_list_deriv_num_1 = gcnew ZedGraph::PointPairList();
 		PointPairList^ p_list_deriv_num_2 = gcnew ZedGraph::PointPairList();
@@ -1140,8 +1075,6 @@ private: System::Windows::Forms::RadioButton^  radioButton2_1;
 				dataGridView2_1->Rows[i]->Cells[2]->Value = accurate;
 				dataGridView2_1->Rows[i]->Cells[3]->Value = numeric1;
 				dataGridView2_1->Rows[i]->Cells[4]->Value = abs(accurate - numeric1);
-
-
 
 			}
 		label5->Text = Convert::ToString(temp);

@@ -18,7 +18,7 @@ class Task_base
 	virtual double Function(double x) const = 0 ;
 	virtual double FunctionDerivative_1(double x) const = 0;
 	virtual double FunctionDerivative_2(double x) const = 0;
-	virtual void Init_coefs(int choise = 0) = 0;
+	void Init_coefs(int choise = 0);
 	void Init_coef_a();
 	void Init_coef_b();
 	void Init_coef_c();
@@ -32,14 +32,9 @@ public:
 	std::vector <double> c_coef;
 	std::vector <double> d_coef;
 	const double PI = 3.141592653589793238462643383279502884197169399375105820974944;
-	/*std::vector <double> D1;
-	std::vector <double> D2;
-	std::vector <double> D3;
-	std::vector <double> F;*/
 	double S_xi(int i, double x);
 	double S_xi_derivative_1(int i, double x);
 	double S_xi_derivative_2(int i, double x);
-	//Task_base();
 
 };
 
@@ -50,7 +45,6 @@ public:
 	double Function(double x) const;
 	double FunctionDerivative_1(double x) const;
 	double FunctionDerivative_2(double x) const;
-	void Init_coefs(int choise = 0);
 };
 
 class Task_main_1 : public Task_base
@@ -60,5 +54,13 @@ public:
 	double Function(double x) const;
 	double FunctionDerivative_1(double x) const;
 	double FunctionDerivative_2(double x) const;
-	void Init_coefs(int choise = 0);
+};
+
+class Task_main_2 : public Task_base
+{
+public:
+	Task_main_2(int _N);
+	double Function(double x) const;
+	double FunctionDerivative_1(double x) const;
+	double FunctionDerivative_2(double x) const;
 };

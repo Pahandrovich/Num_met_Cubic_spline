@@ -199,21 +199,18 @@ double Task_base::S_xi_derivative_2(int i, double x)
 	return (c_coef[i] + d_coef[i] * (x-Xgrid[i]));
 }
 
-void Task_test::Init_coefs(int choise)
+void Task_base::Init_coefs(int choise)
 {
-
-	Init_coef_a();
-	Init_coef_c();
-	Init_coef_b();
-	Init_coef_d();
-}
-
-void Task_main_1::Init_coefs(int choise)
-{
-	if (choise)
+	
+	if (choise == 1)
 	{
 		Mu1 = -(5.0 / 4.0)*sin(1) + cos(1);
 		Mu2 = -1.0 / sqrt(PI);
+	}
+	else if (choise == 2)
+	{
+		Mu1 = 1;
+		Mu2 = 1;
 	}
 
 	Init_coef_a();
