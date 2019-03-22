@@ -30,6 +30,12 @@ namespace Nummethods6sem1 {
 			GraphPane^ pane2_1 = zedGraphControl2_1->GraphPane;
 			GraphPane^ pane2_2 = zedGraphControl2_2->GraphPane;
 			GraphPane^ pane2_3 = zedGraphControl2_3->GraphPane;
+			GraphPane^ pane3_1 = zedGraphControl3_1->GraphPane;
+			GraphPane^ pane3_2 = zedGraphControl3_2->GraphPane;
+			GraphPane^ pane3_3 = zedGraphControl3_3->GraphPane;
+			GraphPane^ pane4_1 = zedGraphControl4_1->GraphPane;
+			GraphPane^ pane4_2 = zedGraphControl4_2->GraphPane;
+			GraphPane^ pane4_3 = zedGraphControl4_3->GraphPane;
 			//pane1_1->XAxis->Title->Text = "Ось X";
 			//pane1_1->YAxis->Title->Text = "Ось Y";
 			pane1_1->Title->Text = "Функция";
@@ -38,6 +44,12 @@ namespace Nummethods6sem1 {
 			pane2_1->Title->Text = "Функция";
 			pane2_2->Title->Text = "Первая производная";
 			pane2_3->Title->Text = "Вторая производная";
+			pane3_1->Title->Text = "Функция";
+			pane3_2->Title->Text = "Первая производная";
+			pane3_3->Title->Text = "Вторая производная";
+			pane4_1->Title->Text = "Функция";
+			pane4_2->Title->Text = "Первая производная";
+			pane4_3->Title->Text = "Вторая производная";
 
 			
 		}
@@ -235,6 +247,8 @@ private: System::Windows::Forms::Button^  button4;
 private: System::Windows::Forms::TextBox^  textBox4_n;
 private: System::Windows::Forms::Label^  label24;
 private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
+private: System::Windows::Forms::Label^  label26;
+private: System::Windows::Forms::Label^  label25;
 
 
 
@@ -427,6 +441,8 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			this->textBox4_n = (gcnew System::Windows::Forms::TextBox());
 			this->label24 = (gcnew System::Windows::Forms::Label());
 			this->zedGraphControl4_1 = (gcnew ZedGraph::ZedGraphControl());
+			this->label25 = (gcnew System::Windows::Forms::Label());
+			this->label26 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1_2))->BeginInit();
@@ -733,6 +749,8 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			// 
 			// tabPage2
 			// 
+			this->tabPage2->Controls->Add(this->label26);
+			this->tabPage2->Controls->Add(this->label25);
 			this->tabPage2->Controls->Add(this->groupBox1);
 			this->tabPage2->Controls->Add(this->textBox2_der2);
 			this->tabPage2->Controls->Add(this->label11);
@@ -1100,7 +1118,7 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			this->tabPage3->Padding = System::Windows::Forms::Padding(4);
 			this->tabPage3->Size = System::Drawing::Size(1703, 874);
 			this->tabPage3->TabIndex = 2;
-			this->tabPage3->Text = L"tabPage3";
+			this->tabPage3->Text = L"Main task 2";
 			this->tabPage3->UseVisualStyleBackColor = true;
 			// 
 			// groupBox2
@@ -1442,7 +1460,7 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage4->Size = System::Drawing::Size(1703, 874);
 			this->tabPage4->TabIndex = 3;
-			this->tabPage4->Text = L"tabPage4";
+			this->tabPage4->Text = L"Main task 3";
 			this->tabPage4->UseVisualStyleBackColor = true;
 			// 
 			// groupBox3
@@ -1759,6 +1777,24 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			this->zedGraphControl4_1->ScrollMinY2 = 0;
 			this->zedGraphControl4_1->Size = System::Drawing::Size(581, 433);
 			this->zedGraphControl4_1->TabIndex = 49;
+			// 
+			// label25
+			// 
+			this->label25->AutoSize = true;
+			this->label25->Location = System::Drawing::Point(1412, 33);
+			this->label25->Name = L"label25";
+			this->label25->Size = System::Drawing::Size(84, 17);
+			this->label25->TabIndex = 31;
+			this->label25->Text = L"Вариант 16";
+			// 
+			// label26
+			// 
+			this->label26->AutoSize = true;
+			this->label26->Location = System::Drawing::Point(1412, 77);
+			this->label26->Name = L"label26";
+			this->label26->Size = System::Drawing::Size(95, 17);
+			this->label26->TabIndex = 32;
+			this->label26->Text = L"sqrt(x) * sin(x)";
 			// 
 			// MyForm
 			// 
