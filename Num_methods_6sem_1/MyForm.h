@@ -217,7 +217,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBox
 private: System::Windows::Forms::TextBox^  textBox4_GP;
 private: System::Windows::Forms::Label^  label22;
 private: System::Windows::Forms::Label^  label23;
-private: System::Windows::Forms::TextBox^  textBox_factor;
+private: System::Windows::Forms::TextBox^  textBox4_factor;
+
 private: System::Windows::Forms::DataGridView^  dataGridView4_1;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn32;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^  dataGridViewTextBoxColumn33;
@@ -409,7 +410,7 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			this->textBox4_GP = (gcnew System::Windows::Forms::TextBox());
 			this->label22 = (gcnew System::Windows::Forms::Label());
 			this->label23 = (gcnew System::Windows::Forms::Label());
-			this->textBox_factor = (gcnew System::Windows::Forms::TextBox());
+			this->textBox4_factor = (gcnew System::Windows::Forms::TextBox());
 			this->dataGridView4_1 = (gcnew System::Windows::Forms::DataGridView());
 			this->dataGridViewTextBoxColumn32 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->dataGridViewTextBoxColumn33 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -447,7 +448,7 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			// zedGraphControl1_1
 			// 
 			this->zedGraphControl1_1->Location = System::Drawing::Point(7, 7);
-			this->zedGraphControl1_1->Margin = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->zedGraphControl1_1->Margin = System::Windows::Forms::Padding(5);
 			this->zedGraphControl1_1->Name = L"zedGraphControl1_1";
 			this->zedGraphControl1_1->ScrollGrace = 0;
 			this->zedGraphControl1_1->ScrollMaxX = 0;
@@ -539,7 +540,7 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			// zedGraphControl1_2
 			// 
 			this->zedGraphControl1_2->Location = System::Drawing::Point(580, 6);
-			this->zedGraphControl1_2->Margin = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->zedGraphControl1_2->Margin = System::Windows::Forms::Padding(5);
 			this->zedGraphControl1_2->Name = L"zedGraphControl1_2";
 			this->zedGraphControl1_2->ScrollGrace = 0;
 			this->zedGraphControl1_2->ScrollMaxX = 0;
@@ -554,7 +555,7 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			// zedGraphControl1_3
 			// 
 			this->zedGraphControl1_3->Location = System::Drawing::Point(7, 446);
-			this->zedGraphControl1_3->Margin = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->zedGraphControl1_3->Margin = System::Windows::Forms::Padding(5);
 			this->zedGraphControl1_3->Name = L"zedGraphControl1_3";
 			this->zedGraphControl1_3->ScrollGrace = 0;
 			this->zedGraphControl1_3->ScrollMaxX = 0;
@@ -764,9 +765,9 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			this->groupBox1->Controls->Add(this->radioButton2_2);
 			this->groupBox1->Controls->Add(this->radioButton2_1);
 			this->groupBox1->Location = System::Drawing::Point(1237, 324);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox1->Size = System::Drawing::Size(192, 105);
 			this->groupBox1->TabIndex = 30;
 			this->groupBox1->TabStop = false;
@@ -776,7 +777,7 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			// 
 			this->radioButton2_2->AutoSize = true;
 			this->radioButton2_2->Location = System::Drawing::Point(21, 70);
-			this->radioButton2_2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->radioButton2_2->Margin = System::Windows::Forms::Padding(4);
 			this->radioButton2_2->Name = L"radioButton2_2";
 			this->radioButton2_2->Size = System::Drawing::Size(156, 21);
 			this->radioButton2_2->TabIndex = 1;
@@ -788,7 +789,7 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			this->radioButton2_1->AutoSize = true;
 			this->radioButton2_1->Checked = true;
 			this->radioButton2_1->Location = System::Drawing::Point(21, 36);
-			this->radioButton2_1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->radioButton2_1->Margin = System::Windows::Forms::Padding(4);
 			this->radioButton2_1->Name = L"radioButton2_1";
 			this->radioButton2_1->Size = System::Drawing::Size(55, 21);
 			this->radioButton2_1->TabIndex = 0;
@@ -835,7 +836,7 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			// zedGraphControl2_2
 			// 
 			this->zedGraphControl2_2->Location = System::Drawing::Point(604, 6);
-			this->zedGraphControl2_2->Margin = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->zedGraphControl2_2->Margin = System::Windows::Forms::Padding(5);
 			this->zedGraphControl2_2->Name = L"zedGraphControl2_2";
 			this->zedGraphControl2_2->ScrollGrace = 0;
 			this->zedGraphControl2_2->ScrollMaxX = 0;
@@ -850,7 +851,7 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			// zedGraphControl2_3
 			// 
 			this->zedGraphControl2_3->Location = System::Drawing::Point(15, 443);
-			this->zedGraphControl2_3->Margin = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->zedGraphControl2_3->Margin = System::Windows::Forms::Padding(5);
 			this->zedGraphControl2_3->Name = L"zedGraphControl2_3";
 			this->zedGraphControl2_3->ScrollGrace = 0;
 			this->zedGraphControl2_3->ScrollMaxX = 0;
@@ -1061,7 +1062,7 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			// zedGraphControl2_1
 			// 
 			this->zedGraphControl2_1->Location = System::Drawing::Point(15, 6);
-			this->zedGraphControl2_1->Margin = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->zedGraphControl2_1->Margin = System::Windows::Forms::Padding(5);
 			this->zedGraphControl2_1->Name = L"zedGraphControl2_1";
 			this->zedGraphControl2_1->ScrollGrace = 0;
 			this->zedGraphControl2_1->ScrollMaxX = 0;
@@ -1094,9 +1095,9 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			this->tabPage3->Controls->Add(this->label18);
 			this->tabPage3->Controls->Add(this->zedGraphControl3_1);
 			this->tabPage3->Location = System::Drawing::Point(4, 25);
-			this->tabPage3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->tabPage3->Margin = System::Windows::Forms::Padding(4);
 			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->tabPage3->Padding = System::Windows::Forms::Padding(4);
 			this->tabPage3->Size = System::Drawing::Size(1703, 874);
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"tabPage3";
@@ -1107,9 +1108,9 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			this->groupBox2->Controls->Add(this->radioButton3_2);
 			this->groupBox2->Controls->Add(this->radioButton3_1);
 			this->groupBox2->Location = System::Drawing::Point(1231, 324);
-			this->groupBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox2->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox2->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox2->Size = System::Drawing::Size(192, 105);
 			this->groupBox2->TabIndex = 48;
 			this->groupBox2->TabStop = false;
@@ -1119,7 +1120,7 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			// 
 			this->radioButton3_2->AutoSize = true;
 			this->radioButton3_2->Location = System::Drawing::Point(21, 70);
-			this->radioButton3_2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->radioButton3_2->Margin = System::Windows::Forms::Padding(4);
 			this->radioButton3_2->Name = L"radioButton3_2";
 			this->radioButton3_2->Size = System::Drawing::Size(156, 21);
 			this->radioButton3_2->TabIndex = 1;
@@ -1131,7 +1132,7 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			this->radioButton3_1->AutoSize = true;
 			this->radioButton3_1->Checked = true;
 			this->radioButton3_1->Location = System::Drawing::Point(21, 36);
-			this->radioButton3_1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->radioButton3_1->Margin = System::Windows::Forms::Padding(4);
 			this->radioButton3_1->Name = L"radioButton3_1";
 			this->radioButton3_1->Size = System::Drawing::Size(55, 21);
 			this->radioButton3_1->TabIndex = 0;
@@ -1178,7 +1179,7 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			// zedGraphControl3_2
 			// 
 			this->zedGraphControl3_2->Location = System::Drawing::Point(597, 6);
-			this->zedGraphControl3_2->Margin = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->zedGraphControl3_2->Margin = System::Windows::Forms::Padding(5);
 			this->zedGraphControl3_2->Name = L"zedGraphControl3_2";
 			this->zedGraphControl3_2->ScrollGrace = 0;
 			this->zedGraphControl3_2->ScrollMaxX = 0;
@@ -1193,7 +1194,7 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			// zedGraphControl3_3
 			// 
 			this->zedGraphControl3_3->Location = System::Drawing::Point(8, 443);
-			this->zedGraphControl3_3->Margin = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->zedGraphControl3_3->Margin = System::Windows::Forms::Padding(5);
 			this->zedGraphControl3_3->Name = L"zedGraphControl3_3";
 			this->zedGraphControl3_3->ScrollGrace = 0;
 			this->zedGraphControl3_3->ScrollMaxX = 0;
@@ -1404,7 +1405,7 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			// zedGraphControl3_1
 			// 
 			this->zedGraphControl3_1->Location = System::Drawing::Point(8, 6);
-			this->zedGraphControl3_1->Margin = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->zedGraphControl3_1->Margin = System::Windows::Forms::Padding(5);
 			this->zedGraphControl3_1->Name = L"zedGraphControl3_1";
 			this->zedGraphControl3_1->ScrollGrace = 0;
 			this->zedGraphControl3_1->ScrollMaxX = 0;
@@ -1430,7 +1431,7 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			this->tabPage4->Controls->Add(this->textBox4_GP);
 			this->tabPage4->Controls->Add(this->label22);
 			this->tabPage4->Controls->Add(this->label23);
-			this->tabPage4->Controls->Add(this->textBox_factor);
+			this->tabPage4->Controls->Add(this->textBox4_factor);
 			this->tabPage4->Controls->Add(this->dataGridView4_1);
 			this->tabPage4->Controls->Add(this->button4);
 			this->tabPage4->Controls->Add(this->textBox4_n);
@@ -1633,14 +1634,14 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 			this->label23->TabIndex = 55;
 			this->label23->Text = L"factor";
 			// 
-			// textBox_factor
+			// textBox4_factor
 			// 
-			this->textBox_factor->Location = System::Drawing::Point(1515, 238);
-			this->textBox_factor->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->textBox_factor->Name = L"textBox_factor";
-			this->textBox_factor->Size = System::Drawing::Size(100, 22);
-			this->textBox_factor->TabIndex = 54;
-			this->textBox_factor->Text = L"2";
+			this->textBox4_factor->Location = System::Drawing::Point(1515, 238);
+			this->textBox4_factor->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->textBox4_factor->Name = L"textBox4_factor";
+			this->textBox4_factor->Size = System::Drawing::Size(100, 22);
+			this->textBox4_factor->TabIndex = 54;
+			this->textBox4_factor->Text = L"2";
 			// 
 			// dataGridView4_1
 			// 
@@ -2249,14 +2250,14 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 
 		for (int i = 1; i < task.c_coef.size(); i++)
 		{
-			dataGridView3_2->Rows->Add();
-			dataGridView3_2->Rows[i - 1]->Cells[0]->Value = i;
-			dataGridView3_2->Rows[i - 1]->Cells[1]->Value = task.Xgrid[i - 1];
-			dataGridView3_2->Rows[i - 1]->Cells[2]->Value = task.Xgrid[i];
-			dataGridView3_2->Rows[i - 1]->Cells[3]->Value = task.a_coef[i];
-			dataGridView3_2->Rows[i - 1]->Cells[4]->Value = task.b_coef[i];
-			dataGridView3_2->Rows[i - 1]->Cells[5]->Value = task.c_coef[i];
-			dataGridView3_2->Rows[i - 1]->Cells[6]->Value = task.d_coef[i];
+			dataGridView4_2->Rows->Add();
+			dataGridView4_2->Rows[i - 1]->Cells[0]->Value = i;
+			dataGridView4_2->Rows[i - 1]->Cells[1]->Value = task.Xgrid[i - 1];
+			dataGridView4_2->Rows[i - 1]->Cells[2]->Value = task.Xgrid[i];
+			dataGridView4_2->Rows[i - 1]->Cells[3]->Value = task.a_coef[i];
+			dataGridView4_2->Rows[i - 1]->Cells[4]->Value = task.b_coef[i];
+			dataGridView4_2->Rows[i - 1]->Cells[5]->Value = task.c_coef[i];
+			dataGridView4_2->Rows[i - 1]->Cells[6]->Value = task.d_coef[i];
 		}
 
 		LineItem^ Curve1 = panel1->AddCurve("accurate trajectory", point_list_accurate, Color::Blue, SymbolType::None);
@@ -2266,12 +2267,12 @@ private: ZedGraph::ZedGraphControl^  zedGraphControl4_1;
 		LineItem^ Curve5 = panel3->AddCurve("accurate trajectory", p_list_deriv_acc_2, Color::Blue, SymbolType::None);
 		LineItem^ Curve6 = panel3->AddCurve("numeric trajectory", p_list_deriv_num_2, Color::Red, SymbolType::None);
 
-		zedGraphControl3_1->AxisChange();
-		zedGraphControl3_1->Invalidate();
-		zedGraphControl3_2->AxisChange();
-		zedGraphControl3_2->Invalidate();
-		zedGraphControl3_3->AxisChange();
-		zedGraphControl3_3->Invalidate();
+		zedGraphControl4_1->AxisChange();
+		zedGraphControl4_1->Invalidate();
+		zedGraphControl4_2->AxisChange();
+		zedGraphControl4_2->Invalidate();
+		zedGraphControl4_3->AxisChange();
+		zedGraphControl4_3->Invalidate();
 
 	}
 };

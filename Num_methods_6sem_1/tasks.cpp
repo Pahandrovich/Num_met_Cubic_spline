@@ -186,8 +186,14 @@ void Task_base::Init_coefs(int choise)
 	}
 	else if (choise == 2)
 	{
-		Mu1 = -1.0/4.0 + cos(1.0)-sin(1.0)-100.0*cos(10.0);
+		//Mu1 = -1.0/4.0 + cos(1.0)-sin(1.0)-100.0*cos(10.0);
+		Mu1 = cos(1.0) - (5.0/4.0)*(sin(1.0) + 80.0*cos(10.0));
 		Mu2 = -100 - 1.0 / sqrt(PI);
+	}
+	else if (choise == 3)
+	{
+		Mu1 = -5.0 * sin(1) / 4.0 + cos(1.0) - 10000.0*cos(100.0);
+		Mu2 = -10000 - 1.0 / sqrt(PI);
 	}
 
 	Init_coef_a();
@@ -233,4 +239,43 @@ double Task_main_2::FunctionDerivative_1(double x) const
 double Task_main_2::FunctionDerivative_2(double x) const
 {
 	return -0.25*sin(x) / sqrt(x*x*x) + cos(x) / sqrt(x) - sqrt(x)*sin(x) - 100*cos(10*x);
+}
+
+Task_main_3::Task_main_3(int _N)
+{
+	N = _N;
+	Xgrid.resize(N + 1);
+	Ygrid.resize(N + 1);
+	a = 1;
+	b = PI;
+	Mu1 = Mu2 = 0;
+	h = (double)(b - a) / N;
+	for (int i = 0; i < N; i++)
+	{
+		Xgrid[i] = a + i * h;
+		Ygrid[i] = Function(a + i * h);
+	}
+	Xgrid[N] = b;
+	Ygrid[N] = Function(b);
+
+	a_coef.resize(N + 1);
+	b_coef.resize(N + 1);
+	c_coef.resize(N + 1);
+	d_coef.resize(N + 1);
+
+}
+
+double Task_main_3::Function(double x) const
+{
+	return sqrt(x)* sin(x) + cos(100 * x);
+}
+
+double Task_main_3::FunctionDerivative_1(double x) const
+{
+	return 0.5*sin(x) / sqrt(x) + sqrt(x)*cos(x) - 100 * sin(100 * x);
+}
+
+double Task_main_3::FunctionDerivative_2(double x) const
+{
+	return -0.25*sin(x) / sqrt(x*x*x) + cos(x) / sqrt(x) - sqrt(x)*sin(x) - 10000 * cos(100 * x);
 }

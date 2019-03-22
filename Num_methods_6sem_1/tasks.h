@@ -64,3 +64,11 @@ public:
 	double FunctionDerivative_1(double x) const;
 	double FunctionDerivative_2(double x) const;
 };
+class Task_main_3 : public Task_base
+{
+public:
+	Task_main_3(int _N);
+	double Function(double x) const;
+	double FunctionDerivative_1(double x) const;
+	double FunctionDerivative_2(double x) const;
+};
